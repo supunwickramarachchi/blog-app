@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="post-container">
+    <header>
+        <h1>{{ object.title }}</h1>
+        <p class="post-meta">By Author Name | Date</p>
+    </header>
+    <article class="post-content">
+        <p>{{ object.body }}</p>
+    </article>
+</div>
+
+{% endblock content %}

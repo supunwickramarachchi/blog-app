@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <header>
+            <h1>Discover the Wonders of Science</h1>
+            <p>Unveiling the latest breakthroughs and discoveries that shape our understanding of the universe.</p>
+        </header>
+        <main>
+            {% for post in post_list %}
+                <div class="card">
+                    <h2>{{ post.title }}</h2>
+                    <a href="{% url "post_detail" post.pk %}" class="btn">Read More</a>
+                </div>
+            {% endfor %}
+        </main>
+    </div>
+
+{% endblock content %}
